@@ -8,6 +8,12 @@ public class Main {
                 new Product("Turkey", 1.57, 2),
                 new Product("Frozen Fries", 2.20, 1),
         };
+        // setter example
+        myCart[0].setName("50cl Fanta");
+        // error handling: 0 => 1
+        myCart[0].setQuantity(0);
+        // error handling: -0.25 => 0.99
+        myCart[1].setPrice(-0.25);
         System.out.println("Total Price: " + cashier.calculateTotal(myCart));
         cashier.generateTicket(myCart);
     }
